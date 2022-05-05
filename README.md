@@ -1,2 +1,2 @@
-# typescript-console-app-template
+# TypeScript Console App Template
  
