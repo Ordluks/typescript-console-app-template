@@ -1,20 +1,24 @@
 {
   "name": "typescript-console-app-template",
   "version": "1.0.0",
-  "description": "",
+  "description": "Simple TypeScript application",
   "main": "dist/bundle.js",
   "scripts": {
     "dev": "cross-env NODE_ENV=development npm run webpack && node dist/bundle.js",
     "build": "cross-env NODE_ENV=production npm run webpack",
+    "lint": "npx eslint .",
     "webpack": "npx webpack --config=webpack.config.ts"
   },
-  "keywords": [],
+  "keywords": ["template", "typescript", "webpack", "eslint"],
   "author": "Yakov Basaranovich",
   "license": "MIT",
   "devDependencies": {
     "@types/node": "^17.0.31",
     "@types/progress-bar-webpack-plugin": "^2.1.2",
+    "@typescript-eslint/eslint-plugin": "^5.22.0",
+    "@typescript-eslint/parser": "^5.22.0",
     "cross-env": "^7.0.3",
+    "eslint": "^8.14.0",
     "progress-bar-webpack-plugin": "^2.1.0",
     "ts-loader": "^9.3.0",
     "ts-node": "^10.7.0",

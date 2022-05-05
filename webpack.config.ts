@@ -20,6 +20,7 @@ const commonConfig: Configuration = {
 	devtool: 'source-map',
 	target: 'node',
 	plugins: [
+		// eslint-disable-next-line @typescript-eslint/no-explicit-any
 		new ProgressBarPlugin() as any
 	]
 }
