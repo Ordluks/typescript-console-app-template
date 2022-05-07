@@ -1,5 +1,5 @@
 import { resolve } from 'path'
-import { Configuration } from 'webpack'
+import { BannerPlugin, Configuration, WebpackPluginInstance } from 'webpack'
 import merge from 'webpack-merge'
 import ProgressBarPlugin from 'progress-bar-webpack-plugin'
 
@@ -19,9 +19,15 @@ const commonConfig: Configuration = {
 	},
 	devtool: 'source-map',
 	target: 'node',
+	resolve: {
+		extensions: ['.ts', '.js']
+	},
 	plugins: [
-		// eslint-disable-next-line @typescript-eslint/no-explicit-any
-		new ProgressBarPlugin() as any
+		new ProgressBarPlugin() as WebpackPluginInstance,
+		new BannerPlugin({
+			banner: '#!/usr/bin/env node',
+			raw: true
+		})
 	]
 }
 
